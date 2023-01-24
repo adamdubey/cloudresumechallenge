@@ -6,6 +6,7 @@ From the [Cloud Resume Challenge project](https://cloudresumechallenge.dev/)!
 
 Site hosted via AWS S3 Bucket: https://devopscloudresume.com/
 
+---
 
 ## Technologies & Frameworks
 
@@ -17,4 +18,3 @@ Site hosted via AWS S3 Bucket: https://devopscloudresume.com/
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [Terraform](https://www.terraform.io/)
-
