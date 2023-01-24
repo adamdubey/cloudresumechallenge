@@ -30,11 +30,7 @@ A serverless Python API and noSQL database to store page visits count.
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Github Workflows](https://docs.github.com/en/actions/using-workflows/about-workflows)
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [JQuery](https://releases.jquery.com/)
 - [Python](https://www.python.org/)
+- [Postman](https://www.postman.com/)
 - [Terraform](https://www.terraform.io/)
-
-
-
-
-
-
