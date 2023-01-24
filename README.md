@@ -4,7 +4,10 @@ From the [Cloud Resume Challenge project](https://cloudresumechallenge.dev/)!
 
 ## Overview
 
+_**FrontEnd:**_
+
 Site hosted via AWS S3 Bucket: https://devopscloudresume.com/
+
 
 ---
 
