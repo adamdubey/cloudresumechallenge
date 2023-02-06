@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: #282c34;
+    color: white;
 }
 
 body {
@@ -44,14 +46,14 @@ p {
 }
 
 a {
-    color: #777;
+    color: #61dafb;
     text-decoration: none;
     border-bottom: 1px dotted #777;
 }
 
 a:hover {
     border-bottom-style: solid;
-    color: black;
+    color: #DAFB61;
 }
 
 ul {
@@ -66,7 +68,7 @@ ul {
 #objective p {
     font-family: Helvetica, Serif;
     font-style: italic;
-    color: #555;
+    color: #777;
 }
 
 dt {
@@ -95,7 +97,6 @@ dd.clear {
 footer {
     text-align: center;
 }
-
 
 .title {
     position: absolute;
