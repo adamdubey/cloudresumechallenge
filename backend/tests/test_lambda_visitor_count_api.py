@@ -12,6 +12,7 @@ with open('../template.yaml', 'r') as f:
 def test_lambda_handler():
     assert "AWS_ACCESS_KEY_ID" in os.environ
     assert "AWS_SECRET_ACCESS_KEY" in os.environ
+    assert "AWS_DEFAULT_REGION" in os.environ
 
     returnedLambdaValue = app.lambda_handler("", "")
 
@@ -24,11 +25,6 @@ def test_lambda_handler():
     assert "Access-Control-Allow-Methods" in returnedLambdaValue["headers"]
     assert "Access-Control-Allow-Headers" in returnedLambdaValue["headers"]
 
-    # Check status code
-    if returnedLambdaValue["statusCode"] == 200:
-        assert "visit_count" in returnedLambdaValue["body"]
-        assert json.loads(returnedLambdaValue["body"])["visit_count"].isnumeric()
-    else:
-        assert json.loads(returnedLambdaValue["body"])["visit_count"] == -1
+    # Check Status Code
+    assert returnedLambdaValue["statusCode"] == 200
 
-    return
