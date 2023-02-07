@@ -27,7 +27,7 @@ Resources:
       Policies:
         - DynamoDBCrudPolicy:
             TableName: devopscloudresume-app-tbl
-      CodeUri: ./
+      CodeUri: api/
       Handler: app.lambda_handler
       Runtime: python3.9
       Architectures:

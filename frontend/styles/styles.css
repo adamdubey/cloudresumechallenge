@@ -1,75 +1,77 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
+    background-color: #282c34;
+    color: white;
+  }
+  
+  body {
     font: 16px Helvetica, Sans-Serif;
     line-height: 24px;
-}
-
-.clear {
+  }
+  
+  .clear {
     clear: both;
-}
-
-#page-wrap {
+  }
+  
+  #page-wrap {
     width: 800px;
     margin: 40px auto 60px;
-}
-
-#avatar {
+  }
+  
+  #avatar {
     float: right;
     margin: -30px 0 0 0;
     border-radius: 50%;
     border: 1px solid #000;
-}
-
-h1 {
+  }
+  
+  h1 {
     margin: 0 0 16px 0;
     padding: 0 0 16px 0;
     font-size: 42px;
     font-weight: bold;
     letter-spacing: -2px;
     border-bottom: 1px solid #999;
-}
-
-h2 {
+  }
+  
+  h2 {
     font-size: 20px;
     margin: 0 0 6px 0;
     position: relative;
-}
-
-p {
+  }
+  
+  p {
     margin: 0 0 16px 0;
-}
-
-a {
-    color: #777;
+  }
+  
+  a {
+    color: #61dafb;
     text-decoration: none;
     border-bottom: 1px dotted #777;
-}
-
-a:hover {
+  }
+  
+  a:hover {
     border-bottom-style: solid;
-    color: black;
-}
-
-ul {
+    color: #dafb61;
+  }
+  
+  ul {
     margin: 0 0 32px 17px;
-}
-
-#objective {
+  }
+  
+  #objective {
     width: 500px;
     float: left;
-}
-
-#objective p {
+  }
+  
+  #objective p {
     font-family: Helvetica, Serif;
     font-style: italic;
-    color: #555;
-}
-
-dt {
+    color: #777;
+  }
+  
+  dt {
     font-style: italic;
     font-weight: bold;
     font-size: 18px;
@@ -79,25 +81,24 @@ dt {
     float: left;
     height: 100px;
     border-right: 1px solid #777;
-}
-
-dd {
+  }
+  
+  dd {
     width: 600px;
     float: right;
-}
-
-dd.clear {
+  }
+  
+  dd.clear {
     float: none;
     margin: 0;
     height: 15px;
-}
-
-footer {
+  }
+  
+  footer {
     text-align: center;
-}
-
-
-.title {
+  }
+  
+  .title {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -106,11 +107,12 @@ footer {
     font-size: 16px;
     color: #777;
     font-weight: normal;
-}
-
-.date {
+  }
+  
+  .date {
     font-family: Georgia, Serif;
     font-size: 16px;
     color: #777;
     font-weight: normal;
-}
+  }
+  
