@@ -3,7 +3,6 @@ import boto3
 
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('devopscloudresume-app-tbl')
-sqs = boto3.resource('sqs', region_name='us-east-1')
 
 def lambda_handler(event, context):
     response = table.get_item(
