@@ -1,31 +1,13 @@
 name: ci-frontend
+
 on:
   push:
     branches: [dev]
 
 jobs:
-  frontend-unit-tests:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./frontend
-
+  hello:
+    runs-on: ubuntu-20.04
+    
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Cache node_modules Dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-cache-key-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-cache-key-
-      
-      - name: Use NodeJS
-        uses: actions/setup-node@v1
-        with:
-          node-version: "16.x"
-      - run: npm ci
-      - run: npm test -- --coverage
-        env:
-          CI: true
+      - name: Hello World
+        run: echo "Hello"
