@@ -20,13 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
           npm i
-          fi
 
       - name: Run tests
         run: |
