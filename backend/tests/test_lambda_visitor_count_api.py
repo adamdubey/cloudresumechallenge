@@ -12,6 +12,7 @@ with open('../template.yaml', 'r') as f:
 def test_lambda_handler():
     assert "AWS_ACCESS_KEY_ID" in os.environ
     assert "AWS_SECRET_ACCESS_KEY" in os.environ
+    assert "AWS_DEFAULT_REGION" in os.environ
 
     returnedLambdaValue = app.lambda_handler("", "")
 
