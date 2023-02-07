@@ -6,11 +6,15 @@ From the [Cloud Resume Challenge project](https://cloudresumechallenge.dev/)!
 
 _**FrontEnd:**_
 
-A static SSL website hosted via AWS S3 Bucket: https://devopscloudresume.com/
+![crc-aws-frontend](./README/crc-frontend.png)
+
+A static SSL website hosted via an AWS S3 Bucket: https://devopscloudresume.com/
 
 _**BackEnd:**_
 
-A serverless _(AWS Lambda)_ Python API and noSQL database _(AWS DynamoDB)_  that stores page visits count.
+![crc-aws-backend](./README/crc-backend.png)
+
+A serverless _(AWS Lambda Function)_ Python API and noSQL database _(AWS DynamoDB)_  that stores page visits.
 
 ---
 
