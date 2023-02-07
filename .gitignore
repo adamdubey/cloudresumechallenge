@@ -32,3 +32,6 @@ crash.*.log
 .terraformrc
 terraform.rc
 
+.aws-sam
+*.aws-sam/
+samconfig.toml
