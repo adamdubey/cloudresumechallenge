@@ -35,3 +35,10 @@ terraform.rc
 .aws-sam
 *.aws-sam/
 samconfig.toml
+__init__.py
+__pycache__
+.pytest_cache
+package-lock.json
+node_modules
+coverage
+videos
