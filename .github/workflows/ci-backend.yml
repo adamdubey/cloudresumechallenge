@@ -7,16 +7,18 @@ on:
 
 jobs:
   backend-api-tests:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
       
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v3
         with:
-          python-version: 3.10
+          python-version: '3.10' 
+
 
       - name: Install dependencies
         working-directory: ./backend
