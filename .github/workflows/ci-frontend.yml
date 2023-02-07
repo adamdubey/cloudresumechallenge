@@ -15,7 +15,6 @@ jobs:
 
       - name: Cache node_modules Dependencies
         uses: actions/cache@v2
-        working-directory: ./frontend
         with:
           path: ~/.npm
           key: ${{ runner.os }}-cache-key-${{ hashFiles('**/package-lock.json') }}
