@@ -10,7 +10,7 @@ A static SSL website hosted via AWS S3 Bucket: https://devopscloudresume.com/
 
 _**BackEnd:**_
 
-A serverless Python API and noSQL database to store page visits count.
+A serverless _(AWS Lambda)_ Python API and noSQL database _(AWS DynamoDB)_  that stores page visits count.
 
 ---
 
@@ -27,10 +27,15 @@ A serverless Python API and noSQL database to store page visits count.
     - [S3](https://aws.amazon.com/s3/)
     - [SAM](https://aws.amazon.com/serverless/sam/)
 - [Axios](https://axios-http.com/docs/intro)
+- [Babel](https://babeljs.io/)
 - [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Cypress](https://www.cypress.io/)
 - [Github Workflows](https://docs.github.com/en/actions/using-workflows/about-workflows)
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [Jest](https://jestjs.io/)
 - [Python](https://www.python.org/)
 - [Postman](https://www.postman.com/)
 - [Terraform](https://www.terraform.io/)
+
+
