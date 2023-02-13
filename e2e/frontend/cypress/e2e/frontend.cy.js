@@ -20,8 +20,8 @@ describe('frontend client application', () => {
   });
 
   it('displays certification secion', () => {
-    cy.get('#certs').contains('Certifications')
-  })
+    cy.get('#certs').contains('Certifications');
+  });
 
   it('displays visitor count', () => {
     cy.get('#visits').should('be.visible');
