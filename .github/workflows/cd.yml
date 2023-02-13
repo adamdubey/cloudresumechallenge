@@ -1,0 +1,41 @@
+name: CI/CD
+on:
+  # pr on for testing
+  pull_request:
+    branches: [dev]
+  push: 
+    branches: [main]
+
+jobs:
+
+  e2e-test-backend:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    
+    - name: Run E2E Tests via Docker for newman
+      run: |
+        docker run -v $(pwd)/e2e/backend-api:/etc/newman -t postman/newman:latest run "VisitorCountAPI.postman_collection" --reporters="cli"
+
+  e2e-test-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        working-directory: ./e2e/frontend/
+        run: |
+          npm i
+
+      - name: Run tests
+        working-directory: ./e2e/frontend/
+        run: |
+          npm run cy:run
+        env:
+          CI: true
