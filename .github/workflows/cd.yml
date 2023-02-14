@@ -29,8 +29,7 @@ jobs:
     - uses: actions/checkout@main
     - name: Run E2E Backend API Postman Tests
       run: |
-        docker run -v $(pwd)/e2e/backend-api:/etc/newman -t postman/newman:latest run "VisitorCountAPI.postman_collection" --reporters="cli"
-
+        docker run -v $(pwd)/e2e/backend-api/:/etc/newman -t postman/newman:latest run "VisitorCountAPI.postman_collection.json" --reporters="cli"
   # deploy-frontend:
   #   runs-on: ubuntu-latest
   #   steps:
