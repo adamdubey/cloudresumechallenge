@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "7c26c585-a6ce-46c3-a44d-9a8b024a237a",
+		"name": "VisitorCountAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "IncrementVisitorCounterAPI",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// status code",
+							"pm.test(\"Status code is 201\",()=>{",
+							"    pm.response.to.have.status(200);",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 200]);",
+							"    pm.response.to.be.ok;",
+							"});",
+							"",
+							"// response time",
+							"pm.test(\"Response time is less than 400ms\", () => {",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);",
+							"});",
+							"",
+							"// valid data returned",
+							"pm.test(\"Response body is a valid JSON\", function () {",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"// visitor counter",
+							"pm.test(\"Visitor count has been incremented\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.be.above(100);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://k1ywrf8h8e.execute-api.us-east-1.amazonaws.com/Prod/visit",
+					"protocol": "https",
+					"host": [
+						"k1ywrf8h8e",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Prod",
+						"visit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
