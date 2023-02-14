@@ -32,3 +32,13 @@ crash.*.log
 .terraformrc
 terraform.rc
 
+.aws-sam
+*.aws-sam/
+samconfig.toml
+__pycache__
+.pytest_cache
+package-lock.json
+node_modules
+coverage
+videos
+screenshots

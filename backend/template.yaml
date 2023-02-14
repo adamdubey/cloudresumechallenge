@@ -1,0 +1,51 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  devopscloudresume-app
+  SAM Template for devopscloudresume-app
+
+Globals:
+  Function:
+    Timeout: 3
+
+Resources:
+  DevopsCloudResumeAppDynamoDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: devopscloudresume-app-tbl
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: "ID"
+          AttributeType: "S"
+      KeySchema:
+        - AttributeName: "ID"
+          KeyType: "HASH"
+
+  DevopsCloudResumeAppLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: devopscloudresume-app-tbl
+      CodeUri: api/
+      Handler: app.lambda_handler
+      Runtime: python3.9
+      Architectures:
+        - x86_64
+      Events:
+        Visits:
+          Type: Api
+          Properties:
+            Path: /visit
+            Method: post 
+
+Outputs:
+  DevopsCloudResumeAppLambdaFunctionApi:
+    Description: "API Gateway endpoint URL for Prod DevopsCloudResumeAppLambdaFunction"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/visit/"
+  DevopsCloudResumeAppLambdaFunction:
+    Description: "DevopsCloudResumeAppLambdaFunction ARN"
+    Value: !GetAtt DevopsCloudResumeAppLambdaFunction.Arn
+  DevopsCloudResumeAppLambdaFunctionIamRole:
+    Description: "Implicit IAM Role created for DevopsCloudResumeAppLambdaFunction"
+    Value: !GetAtt DevopsCloudResumeAppLambdaFunction.Arn
