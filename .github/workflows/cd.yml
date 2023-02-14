@@ -1,9 +1,10 @@
-name: CI/CD
+name: Continuous Deployment
 on:
+  # pr on for testing
   pull_request:
     branches: [dev]
-  push: 
-    branches: [main]
+  # push: 
+  #   branches: [main]
 
 jobs:
   deploy-backend:
@@ -26,8 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@main
-    
-    - name: Run E2E Tests via Docker for newman
+    - name: Run E2E Backend API Postman Tests
       run: |
         docker run -v $(pwd)/e2e/backend-api:/etc/newman -t postman/newman:latest run "VisitorCountAPI.postman_collection" --reporters="cli"
 
